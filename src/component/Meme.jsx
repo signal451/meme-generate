@@ -14,6 +14,9 @@ export default function Meme() {
         </div>
       </div>
       <Button/>    
+      <div className="meme">
+        <img src = "https://i.imgflip.com/23ls.jpg" alt="meme" />
+      </div>
     </div>
   );
 }

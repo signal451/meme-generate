@@ -2,8 +2,11 @@
 
 body {
     margin: 0;
-    font-family: 'Karla', Helvetica, sans-serif, Verdana;   
+    font-family: 'Karla', Helvetica, sans-serif, Verdana;  
+    overflow: hidden; 
+    box-sizing:border-box
 }
+
 
 header {
     display: flex;
@@ -70,6 +73,16 @@ main {
     background-image: linear-gradient(to right,#672280, #A626D3);
 }
 
+.form .meme > img {
+    width: 100%;
+}
+
+.form > .meme {
+    width: 90%;
+    margin: auto;
+    margin-top: 3rem;
+}
+
 
 @media screen and (min-width: 600px) {
     .column {
@@ -79,5 +92,23 @@ main {
     .column-1{
         width: 48%;
     }
+
+    .form > .meme {
+        width: 60%;
+    }
 }
+
+@media screen and (min-width: 800px) {
+    .form > .meme {
+        width: 40%;
+    }
+}
+
+
+@media screen and (min-width: 1200px) {
+    .form > .meme {
+        width: 20%
+    }
+}
+
 
