@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Button from "./button";
 
-// --> fixed resized image ... for certain screen size ...
-// learn to use redis
 
 const url = "https://api.imgflip.com/caption_image";
 
@@ -52,8 +50,8 @@ export default function Meme() {
     template_id: meme.id,
     text0: field.top,
     text1: field.bottom,
-    username: "tugsuu.png",
-    password: "Azura_266",
+    username: import.meta.env.VITE_USERNAME,
+    password: import.meta.env.VITE_PASSWORD,
   };
 
   useEffect(() => {
@@ -61,16 +59,14 @@ export default function Meme() {
       let meme = findMeme(res.data);
       /* 
         TO DO
-            1. Get only meme's that has two boxes or else
-            generate random number until it finds. 
             2. resize image for specific width. --> 
-      
       */
       setMeme({
         id: meme.id,
         url: meme.url,
       });
-    });
+    })
+    .catch(err => console.error(err));
   }, []);
 
   async function postMeme() {
