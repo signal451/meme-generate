@@ -44,8 +44,10 @@ main {
 }
 
 .form .column-1{
-    padding-top: 1rem;
+    padding-top: 1rem; 
 }
+
+
 
 .form .column-1 > input[type=text]{
     height: 2.5rem;
@@ -90,11 +92,15 @@ main {
         justify-content: space-between;
     }
     .column-1{
-        width: 48%;
+        width: 50%;
     }
 
     .form > .meme {
         width: 60%;
+    }
+
+    .sm-space {
+        padding-left: 1rem;
     }
 }
 
@@ -109,6 +115,7 @@ main {
     .form > .meme {
         width: 20%
     }
+
 }
 
 
