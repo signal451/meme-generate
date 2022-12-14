@@ -46,6 +46,8 @@ export default function Meme() {
     });
   };
 
+
+
   const data = {
     template_id: meme.id,
     text0: field.top,
@@ -54,16 +56,13 @@ export default function Meme() {
     password: import.meta.env.VITE_PASSWORD,
   };
 
+
   useEffect(() => {
     getMeme().then((res) => {
-      let meme = findMeme(res.data);
-      /* 
-        TO DO
-            2. resize image for specific width. --> 
-      */
+      let random_meme = findMeme(res.data);
       setMeme({
-        id: meme.id,
-        url: meme.url,
+        id: random_meme.id,
+        url: random_meme.url,
       });
     })
     .catch(err => console.error(err));
@@ -94,6 +93,7 @@ export default function Meme() {
     postMeme()
       .then((res) => {
         setMeme({
+          id: meme.id,
           url: res.data.url,
         });
       })
